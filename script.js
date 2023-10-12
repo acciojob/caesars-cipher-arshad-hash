@@ -37,7 +37,7 @@ function rot13(Str) {
   Str = Str.toUpperCase();
 	for(let i=0; i<Str.length ; i++)
 		{  
-			if(lookup[Str[i]] =Str[i])
+			if(lookup[Str[i]])
 			{
 				decodedArr = decodedArr+lookup[Str[i]];
 			}
