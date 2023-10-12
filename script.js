@@ -31,19 +31,21 @@ const lookup = {
   ",": ",",
 };
 
-function rot13(encodedStr) {
-  let decodedArr = []; // Your Result goes here
+function rot13(Str) {
+  let decodedArr = ""; // Your Result goes here
   // Only change code below this line
-	for(let i=0; i<encodedStr.length ; i++)
-		{ const char = encodedStr[i];
-			if(lookup.hasOwnProperty(char))
+  Str = Str.toUpperCase();
+	for(let i=0; i<Str.length ; i++)
+		{  
+			if(lookup[Str[i]] =Str[i])
 			{
-				decodedArr.push(lookup[char]);
+				decodedArr = decodedArr+lookup[Str[i]];
 			}
-		 else
+			else
 			{
-			 decodedArr.push(char);
-		 }
+				decodedArr= decodedArr +Str[i];
+			}
+			
 		}
 
   return decodedArr.join(" ");
